@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
+        <script src="https://unpkg.com/vue@next"></script>
+        <title>Vue</title>
+    </head>
+    <body>
+
+        <!--Task 1-->
+
+        <div class="container text-center" id="hook">
+            <div class="row">
+                <h2 class="text-muted">{{product.title}}</h2>
+                <div class="col-12 col-md-6 col-lg-8">
+                    <div class="card" style="width: 100%;">
+                        <img  :src="product.url" class="card-img-top" alt="COWON Player">
+                        <div class="card-body">
+                            <p v-html="product.description" class="card-text text-muted"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h4 class="text-muted">Model</h4>
+                        </div>
+                        <div>
+                            <h4 v-text="product.model" class="text-muted"></h4>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h4 class="text-muted">Color</h4>
+                        </div>
+                        <div>
+                            <h4 v-text="product.color" class="text-muted"></h4>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <h4 class="text-muted">Price</h4>
+                        </div>
+                        <div>
+                            <h4 class="text-muted">{{$filters.addCurrency(product.price)}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--Task 2-->
+
+        <div class="container text-center" id="hook_">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img :src="user.url" style="max-width: 50%;" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-6 col-lg-8">
+                   <div class="card text-center">
+                      <div class="card-header">
+                        <span>{{user.name}}</span>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Hobbies</h5>
+                        <p class="card-text">{{user.hobbies.join(", ")}}</p>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                      </div>
+                      <div class="card-footer text-muted">
+                        <span>last update : {{user.lastUpdated}}</span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    </body>
+</html>
