@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <script src="https://unpkg.com/vue@next"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>Vue Homework 2</title>
+    </head>
+    <body>
+        <section id="hook">
+            <article>
+            <div id="description">
+                <div>
+                    <img :src="article.url">
+                </div>
+                <div v-html="article.description">
+                </div>
+                <div>
+                    <span class="btn" @click="visible = !visible">
+                        {{visible ? "Скрыть" : "Подробнее"}}
+                    </span>
+                </div>
+            </div>
+            <div v-if="visible" v-html="article.content">
+            </div>
+            </article>
+            <nav>
+                <ul>
+                    <li>О нас</li>
+                    <li>Продукция</li>
+                    <li>Контакты</li>
+                    <li>Миссия</li>
+                </ul>
+            </nav>
+            <main>
+                <div v-if="selectedIndex === 0">
+                <p>Мы занимаемся очень важными и сложными вещами. В остальное время мы работаем.</p>
+            </div>
+            <div v-if="selectedIndex === 1">
+                <p>Наша продукция и опасна и трудна.</p>
+            </div>
+            <div v-if="selectedIndex === 2">
+                <p>Мы слишком известны чтобы сообщать контакты.</p>
+            </div>
+            <div v-if="selectedIndex === 3">
+                <p>Миссия невыполнима 3.</p>
+            </div>
+            </main>
+        </section>
+    <script type="text/javascript" src="assets/js/script.js">
+        
+    </script>
+    </body>
+</html>
