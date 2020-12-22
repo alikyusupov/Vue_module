@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <script src="https://unpkg.com/vue@next"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>Vue Homework 3</title>
+    </head>
+    <body>
+        <div id="hook_">
+            <ul>
+                <li class="nice">
+                    <p @click="editFn($event)" v-text="txt" v-show="!edit">
+                    </p>
+                    <input @blur="saveFn($event)" v-show="edit" type="text" size="150">
+                </li>
+            </ul>
+        </div>
+    <script type="text/javascript" src="assets/js/script.js">
+    </script>
+    </body>
+</html>
