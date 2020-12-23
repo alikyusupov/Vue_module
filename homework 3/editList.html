@@ -9,9 +9,18 @@
         <div id="hook_">
             <ul>
                 <li class="nice">
-                    <p @click="editFn($event)" v-text="txt" v-show="!edit">
+                    <p 
+                    @click="edit = true" 
+                    v-show="!edit">
+                        {{txt}}
                     </p>
-                    <input @blur="saveFn($event)" v-show="edit" type="text" size="150">
+                    <input 
+                    @blur="edit = false" 
+                    v-show="edit" 
+                    type="text" 
+                    size="150"
+                    v-model="txt"
+                    >
                 </li>
             </ul>
         </div>

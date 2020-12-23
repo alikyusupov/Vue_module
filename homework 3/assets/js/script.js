@@ -53,14 +53,17 @@ let app_ = Vue.createApp({
 
         		},
         		methods:{
-        			editFn(e){
+        			/*
+        			Пилотная версия  - тоже рабочая но не то что требовалось 
+        			*/
+        			/*editFn(e){
         				this.edit = true;
         				e.target.nextElementSibling.value = e.target.innerText;
         			},
         			saveFn(e){
         				this.txt = e.target.value;
         				this.edit = false;
-        			}
+        			}*/
 
         		},
         		computed:{
