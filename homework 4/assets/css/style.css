@@ -1,0 +1,87 @@
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'prettyFont'; /*a name to be used later*/
+    src: url("../pretty_font.ttf"); /*URL to font*/
+}
+
+p, span{
+	font-family: "prettyFont";
+	cursor: pointer;
+}
+
+nav{
+	display: flex;
+	justify-content: center;
+}
+
+article{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+img{
+	width: 50px;
+}
+
+
+ul{
+	list-style-type: none;
+	border: 2px solid grey;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+li{
+	display: flex;
+	justify-content: space-between;
+}
+
+#hook{
+	position: relative;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.gridClass{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.gridClass img{
+	width: 150px;
+}
+
+
+.closer{
+	margin-left: 90%;
+}
+
+section{
+	text-align: center;
+	margin-top:25vh;
+	margin-right: 25%;
+	margin-left: 25%;
+	position: fixed;
+	transform: translateY(-1200px);
+	border: 2px solid black;
+	border-radius: 15px;
+	background-color: white;
+	z-index: 10;
+}
+
+section.active{
+	transform: translateY(0);
+	transition: .5s ease-in;
+}
+
+section p {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+

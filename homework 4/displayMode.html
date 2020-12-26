@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <script src="https://unpkg.com/vue@next"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>Vue Homework 4</title>
+    </head>
+    <body>
+        <div id="hook">
+            <nav>
+                <span v-show="isGrid" @click="isGrid = !isGrid">GRID</span>
+                <span v-show="!isGrid" @click="isGrid = !isGrid">LIST</span>
+            </nav>
+            <hr>
+            <main :class="{gridClass:isGrid}">
+                <article v-for="a in articles">
+                    <div v-show="!isGrid">
+                        <p>{{a.title}}</p>
+                    </div>
+                    <div>
+                        <img :data-content="a.body" :src="path" @click="openModal($event)">
+                    </div>
+                </article>
+
+                <section id="modal">
+                    <span class="closer" @click="closeModal($event)">X</span>
+                    <p></p>
+                </section>
+            </main>
+        </div>
+    <script type="text/javascript" src="assets/js/script_2.js">
+    </script>
+    </body>
+</html>

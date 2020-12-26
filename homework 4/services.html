@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <script src="https://unpkg.com/vue@next"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>Vue Homework 4</title>
+    </head>
+    <body>
+        <div id="hook">
+            <ul>
+                <li v-for="s in services" @click="arrCosts.push(s.serviceCost);numOfServices++">
+                    <div>
+                        <p>
+                            {{s.serviceName}}
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            {{s.serviceCost}}
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <p v-if="arrCosts.length">
+                Количество выбранных услуг - {{numOfServices}}
+                на общую сумму
+            {{ 
+                arrCosts.reduce(function(a, b){
+                    return a + b
+                }, 0) 
+            }}
+            </p>
+        </div>
+    <script type="text/javascript" src="assets/js/script.js">
+    </script>
+    </body>
+</html>
