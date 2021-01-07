@@ -1,0 +1,34 @@
+*{
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "prettyFont";
+}
+
+@font-face {
+    font-family: 'prettyFont'; /*a name to be used later*/
+    src: url("./pretty_font.ttf"); /*URL to font*/
+}
+
+ul li{
+	cursor: pointer;
+}
+
+ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+a{
+	text-decoration: none;
+	color: grey;
+}
+
+.centered{
+	text-align: center;
+}
+
+.activeLink{
+	color: red;
+}
+

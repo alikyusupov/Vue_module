@@ -1,0 +1,23 @@
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.activeLink{
+	color: red;
+}
+
+a{
+	text-decoration: none;
+	color: gray;
+}
+
+.centered{
+	text-align: center;
+}

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="https://unpkg.com/vue-router@4"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>Vue Homework 6</title>
+    </head>
+    <body>
+        <div id="hook">
+            <nav>
+            <ul>
+                <li>
+                    <router-link 
+                    to="/" 
+                    active-class="activeLink">
+                        Home
+                    </router-link>
+                </li>
+                <li>
+                    <router-link
+                    to="/products"
+                    active-class="activeLink">
+                        Products
+                    </router-link>
+                </li>
+                <li>
+                    <router-link 
+                    to="/contacts"
+                    active-class="activeLink">
+                        Contacts
+                    </router-link>
+                </li>
+            </ul>
+        </nav>
+        <router-view></router-view>
+        </div>
+        <script type="text/javascript" src="assets/js/script.js">
+        </script>
+    </body>
+</html>
