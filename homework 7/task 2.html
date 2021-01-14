@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List Move Transitions Sudoku Example</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style_.css" />
+  </head>
+  <body>
+    <div id="game-demo" class="demo">
+      <button @click="shuffle">
+        Shuffle
+      </button>
+      <button @click="restart">
+        Restart
+      </button>
+      <transition-group name="cell" tag="div" class="container">
+        <div v-for="cell in cells" :key="cell.id" class="cell" @click="pick($event)">
+          {{ cell.number }}
+        </div>
+      </transition-group>
+    </div>
+  <script type="text/javascript" src="assets/js/script_.js"></script>
+  </body>
+</html>
