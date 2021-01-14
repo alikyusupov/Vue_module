@@ -13,6 +13,7 @@
   border: 1px solid #aaa;
   margin-right: -1px;
   margin-bottom: -1px;
+  cursor: pointer;
 }
 .cell:nth-child(3n) {
   margin-right: 0;

@@ -1,10 +1,15 @@
+      const colors = ["red","green","orange","blue"];
+      const sizes = ["10px","12px","14px","16px"];
+
       new Vue({
         el: "#game-demo",
         data: {
           cells: Array.apply(null, { length: 100 }).map(function(_, index) {
             return {
               id: index,
-              number: index + 1
+              number: index + 1,
+              color:colors[Math.floor(Math.random()*colors.length)],
+              size:sizes[Math.floor(Math.random()*sizes.length)]
             };
           }),
           counter: 0,

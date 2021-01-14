@@ -15,7 +15,12 @@
         Restart
       </button>
       <transition-group name="cell" tag="div" class="container">
-        <div v-for="cell in cells" :key="cell.id" class="cell" @click="pick($event)">
+        <div 
+        v-for="cell in cells" 
+        :key="cell.id" 
+        :style="{color:cell.color,fontSize:cell.size}"
+        class="cell" 
+        @click="pick($event)">
           {{ cell.number }}
         </div>
       </transition-group>
