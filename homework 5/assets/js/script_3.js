@@ -32,30 +32,29 @@ Vue.createApp({
                     },
             methods:{
                 add: function(pic){
-                this.pics.push(pic);
-            }
-                    },
+                    this.pics.push(pic);
+                },
+                remove: function(idx){
+                    this.pics.splice(idx, 1)
+                }
+            },
             computed:{
                        
                     }
 })
 .component('piclist',{
-    props:["pics"],
+    props:["pics","removefn"],
     template: `
         <div id="gallery">
             <picdetails v-for="(pic,index) in pics" 
             :key="pic.name"
             :pic="pic"
             :index="index"
-            :removefn="remove"
+            :removefn="removefn"
             >
             </picdetails>
         </div>`,
-    methods:{
-            remove: function(index){
-                this.pics.splice(index, 1);
-                }
-            }
+    methods:{}
 })
 .component('picdetails',{
     props:["pic","index","removefn"],
