@@ -10,11 +10,7 @@
                 <p>{{a.title}}</p>
             </div>
             <div>
-                <img :data-content="a.body" src="../assets/news.jpg" @click="openModal($event)">
-                <!--
-                    привязка к атрибуту src не удалась 
                     <img :data-content="a.body" :src="path" @click="openModal($event)">
-                -->
             </div>
         </article>
 
@@ -33,10 +29,7 @@ export default {
     data: function(){
             return {
                 articles: [],
-                /*
-                привязка к атрибуту src не удалась см. выше
-                path:"../assets/news.jpg",
-                */
+                path:"/assets/news.jpg",
                 isGrid:true
             }
     },
