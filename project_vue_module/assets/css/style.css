@@ -1,0 +1,66 @@
+*{
+	padding: 0;
+	box-sizing: border-box;
+}
+ul{
+	list-style-type: none;
+}
+ul.task1{
+	display: flex;
+	justify-content: space-around;
+}
+
+@font-face {
+    font-family: 'prettyFont'; /*a name to be used later*/
+    src: url("../pretty_font.ttf"); /*URL to font*/
+}
+
+p, label, h2{
+	font-family: "prettyFont";
+	cursor: pointer;
+}
+
+
+/*Task 3*/
+
+#gallery{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#gallery > div{
+	width: 100%;
+	text-align: center;
+	border: 1px solid gray;
+	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+	max-width: 680px;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+#gallery img{
+	max-width: 100%;
+}
+
+.btn{
+	border:1px solid gray;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	border-radius: 3px;
+	font-family: "prettyFont";
+	cursor: pointer;
+}
+.btn:hover{
+	color: white;
+	background-color: gray;
+}
+.addform input,select{
+	font-size: 24px;
+	padding: 5px;
+}
+
+/*Task 4*/
+

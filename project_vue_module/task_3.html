@@ -8,13 +8,18 @@
     <body>
         <div id="hook">
             <addform 
-            :addfn="add">
-            	
+            :addfn="add"
+            :pics="pics"
+            @mysort="mynewsort"
+            >
+            
             </addform>
 
             <hr>
             
             <piclist 
+            @acceptchange="mainchange"
+            :completed="completed"
             :pics="pics" 
             :removefn="remove">
             	
